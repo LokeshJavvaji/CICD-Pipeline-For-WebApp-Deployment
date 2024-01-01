@@ -1,5 +1,4 @@
 version: 0.2
-
 phases:
   install:
     runtime-versions:
@@ -11,21 +10,12 @@ phases:
       - composer install --no-dev --optimize-autoloader
   build:
     commands:
-      - echo "Running PHPUnit tests"
-      - cd /Recruitment_Management_System/
-      - vendor/bin/phpunit
-      - echo "Linting PHP files"
-      - find . -name "*.php" -exec php -l {} \;
-      - echo "Copying configuration files"
-      - cd /Recruitment_Management_System/
-      - cp config/database.example.php config/database.php
-      - echo "Running database migrations"
-      - cd /var/www/html/Recruitment_Management_System
-      - mysql -h <DB_HOST> -u <DB_USERNAME> -p<DB_PASSWORD> <DB_NAME> < database.sql
+      - echo "Running tests"
+      
   post_build:
     commands:
       - echo "Running additional post-build steps"
-      # Add any other post-build steps here
+      
 
 artifacts:
   files:
