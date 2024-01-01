@@ -5,9 +5,8 @@ phases:
       php: 7.4
   pre_build:
     commands:
-      - echo "Installing dependencies"
-      - cd /Recruitment_Management_System/
-      - composer install --no-dev --optimize-autoloader
+      - echo ""
+      
   build:
     commands:
       - echo "Running tests"
@@ -20,4 +19,4 @@ phases:
 artifacts:
   files:
     - '**/*'
-  base-directory: '/var/www/html/Recruitment_Management_System'
+  base-directory: '/var/www/html/Recruitment_Management_System/'
