@@ -5,7 +5,8 @@ phases:
       php: 8.2
   pre_build:
     commands:
-      - echo ""
+      - echo "Linting PHP files"
+      - find . -name "*.php" -exec php -l {} \;
       
   build:
     commands:
@@ -19,4 +20,5 @@ phases:
 artifacts:
   files:
     - '**/*'
+  base-directory : '/'
   
