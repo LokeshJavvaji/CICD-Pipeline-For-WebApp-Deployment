@@ -116,7 +116,7 @@
                 </div>
             </div>
             <br>
-            <div class="container"><div class="small text-center text-muted">Welcome - <?php echo $_SESSION['setting_name'] ?> | <a href="https://1sourcecodr.blogspot.com" target="_blank">1 Source Code</a></div></div>
+            
         </footer>
         
        <?php include('footer.php') ?>
