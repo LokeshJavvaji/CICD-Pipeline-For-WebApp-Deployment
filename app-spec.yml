@@ -1,6 +1,6 @@
 version: 0.0
 os: linux
 files:
-  - source: /
+  - source: Recruitment_Management_System/
     destination: /var/www/html/
 
